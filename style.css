@@ -1,0 +1,57 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+
+}
+
+
+.panel-container-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  border: 1px solid silver;
+  overflow: hidden;
+}
+
+.panel-top {
+  flex: 0 0 auto;
+  /* only manually resize */
+  height: 1vh;
+  width: 100%;
+  z-index: -9999;
+  background: #000;
+}
+
+.splitter-horizontal {
+  flex: 0 0 auto;
+  height: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
+  cursor: row-resize;
+}
+
+.panel-bottom {
+  flex: 1 1;
+  /* resizable */
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+
+.h_iframe1 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+}
+
+.h_iframe2 iframe {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
